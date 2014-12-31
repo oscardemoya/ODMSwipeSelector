@@ -3,7 +3,7 @@
 //  ODMSwipeSelector
 //
 //  Created by Oscar De Moya on 10/24/14.
-//  Copyright (c) 2014 Oscar De Moya. All rights reserved.
+//  Copyright (c) 2014 Oscart. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

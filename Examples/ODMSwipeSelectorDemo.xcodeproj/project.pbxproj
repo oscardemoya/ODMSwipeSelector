@@ -177,8 +177,9 @@
 		3F70E95D1A533541009A18A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ODM;
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = Koombea;
+				ORGANIZATIONNAME = Oscart;
 				TargetAttributes = {
 					3F70E9641A533541009A18A8 = {
 						CreatedOnToolsVersion = 6.1.1;
