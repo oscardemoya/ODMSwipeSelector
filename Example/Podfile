@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ODMSwipeSelector', :exclusive => true do
+  pod "ODMSwipeSelector", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "ODMSwipeSelector", :path => "../"
+
+  
+end

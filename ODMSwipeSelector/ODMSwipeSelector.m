@@ -148,6 +148,11 @@
     [self updateValueLabelWithValue:value];
 }
 
+- (void)setUnit:(MCDMeasureFormat)unit {
+    _unit = unit;
+    [self updateValueLabelWithValue:self.value];
+}
+
 #pragma mark - Private
 
 - (NSString *)sizeStringWithValue:(float)value {

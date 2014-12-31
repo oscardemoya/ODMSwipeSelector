@@ -1,0 +1,14 @@
+PODS:
+  - ODMSwipeSelector (0.1.0)
+
+DEPENDENCIES:
+  - ODMSwipeSelector (from `../`)
+
+EXTERNAL SOURCES:
+  ODMSwipeSelector:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ODMSwipeSelector: 3702ab34f68ac4a5c944e5cb67684bf7c32c529c
+
+COCOAPODS: 0.35.0
