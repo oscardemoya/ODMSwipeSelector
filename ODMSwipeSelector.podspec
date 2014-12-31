@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/oscart/ODMSwipeSelector.git", :tag => "0.0.3" }
   s.source_files  = "ODMSwipeSelector", "ODMSwipeSelector/*.{h,m}"
   s.frameworks   = 'UIKit'
-  s.ios.deployment_target = '8.1'
-  s.platform = :ios, '8.1'
+  s.ios.deployment_target = '8.0'
+  s.platform = :ios, '8.0'
   s.requires_arc = true
 
 end
