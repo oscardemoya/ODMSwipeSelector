@@ -10,7 +10,7 @@
 
 @interface ODMSwipeSelector ()
 
-@property (assign, nonatomic) float currentValue;
+@property (assign, nonatomic) float newValue;
 @property (assign, nonatomic) float minSwipeRed;
 @property (assign, nonatomic) float maxSwipeRed;
 @property (assign, nonatomic) float minSwipeGreen;
@@ -285,16 +285,16 @@
     
     // Update current value
     float percent = (translation.x / self.frame.size.width);
-    float newValue = self.value + (self.maxIncrementValue * percent);
-    NSLog(@"%.2f", newValue);
+    float increment = self.incrementValue * (int)((self.maxIncrementValue / self.incrementValue) * percent);
+    float newValue = self.value + increment;
     if (newValue >= self.minValue && newValue <= self.maxValue) {
-        self.currentValue = newValue;
+        self.newValue = newValue;
     } else if (newValue <= self.minValue) {
-        self.currentValue = self.minValue;
+        self.newValue = self.minValue;
     } else if (newValue >= self.maxValue) {
-        self.currentValue = self.maxValue;
+        self.newValue = self.maxValue;
     }
-    [self updateValueLabelWithValue:self.currentValue];
+    [self updateValueLabelWithValue:self.newValue];
 }
 
 - (void)endSwipeWithGesture:(UIPanGestureRecognizer *)recognizer {
@@ -312,7 +312,7 @@
     }];
     
     // Update value
-    self.value = self.currentValue;
+    self.value = self.newValue;
 }
 
 @end

@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/ODMSwipeSelector.svg?style=flat)](http://cocoadocs.org/docsets/ODMSwipeSelector)
 [![Platform](https://img.shields.io/cocoapods/p/ODMSwipeSelector.svg?style=flat)](http://cocoadocs.org/docsets/ODMSwipeSelector)
 
-![](https://s3.amazonaws.com/f.cl.ly/items/3b2v2V2j0y2E2z1l3V3a/Screen%20Recording%202014-12-31%20at%2010.55%20AM.gif)
+![](http://f.cl.ly/items/0o3D3V2D3J2z1A3k0H3D/Screen%20Recording%202015-03-04%20at%2001.48%20PM.gif)
 
 ## Usage
 

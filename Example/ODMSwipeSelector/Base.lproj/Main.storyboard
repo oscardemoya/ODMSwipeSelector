@@ -14,14 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfy-N6-mvn" customClass="ODMSwipeSelector">
-                                <rect key="frame" x="0.0" y="80" width="600" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfy-N6-mvn" userLabel="Height Swipe Selector" customClass="ODMSwipeSelector">
+                                <rect key="frame" x="0.0" y="80" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="BGN-ho-msm"/>
+                                    <constraint firstAttribute="height" constant="50" id="BGN-ho-msm"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="minSwipingColor">
@@ -50,15 +50,15 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Height"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.10000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9h-DW-hFg" customClass="ODMSwipeSelector">
-                                <rect key="frame" x="0.0" y="170" width="600" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9h-DW-hFg" userLabel="Weight Swipe Selector" customClass="ODMSwipeSelector">
+                                <rect key="frame" x="0.0" y="140" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="jpD-3v-jeQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="jpD-3v-jeQ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="minSwipingColor">
@@ -91,48 +91,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-cF-6re" customClass="ODMSwipeSelector">
-                                <rect key="frame" x="0.0" y="350" width="600" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80e-vO-buR" userLabel="Shirt Swipe Selector" customClass="ODMSwipeSelector">
+                                <rect key="frame" x="0.0" y="200" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Bmy-Pm-DNK"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="minSwipingColor">
-                                        <color key="value" red="0.75436961650000001" green="0.04853352532" blue="0.14692534509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="maxSwipingColor">
-                                        <color key="value" red="0.42635200280000002" green="0.0" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultLabelColor">
-                                        <color key="value" red="0.26379796859999999" green="0.26379004119999999" blue="0.2637945116" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="swipingLabelColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="9.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxIncrementValue">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shoes Size"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80e-vO-buR" customClass="ODMSwipeSelector">
-                                <rect key="frame" x="0.0" y="260" width="600" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="SFw-er-GTn"/>
+                                    <constraint firstAttribute="height" constant="50" id="SFw-er-GTn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="minSwipingColor">
@@ -165,6 +128,43 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-cF-6re" userLabel="Shoes Swipe Selector" customClass="ODMSwipeSelector">
+                                <rect key="frame" x="0.0" y="260" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Bmy-Pm-DNK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minSwipingColor">
+                                        <color key="value" red="0.75436961650000001" green="0.04853352532" blue="0.14692534509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxSwipingColor">
+                                        <color key="value" red="0.42635200280000002" green="0.0" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultLabelColor">
+                                        <color key="value" red="0.26379796859999999" green="0.26379004119999999" blue="0.2637945116" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="swipingLabelColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="9.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxIncrementValue">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shoes Size"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -182,6 +182,7 @@
                             <constraint firstItem="bfy-N6-mvn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tK1-4m-uWp"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="heightSelector" destination="bfy-N6-mvn" id="TKX-WF-zXj"/>
                         <outlet property="shirtSizeSelector" destination="80e-vO-buR" id="aLN-tj-JrN"/>
