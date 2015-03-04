@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -39,16 +39,19 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
                                         <real key="value" value="5.5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxIncrementValue">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Height"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9h-DW-hFg" customClass="ODMSwipeSelector">
@@ -73,16 +76,19 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
                                         <real key="value" value="170"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <real key="value" value="500"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxIncrementValue">
                                         <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Weight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-cF-6re" customClass="ODMSwipeSelector">
@@ -107,16 +113,19 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
                                         <real key="value" value="9.5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxIncrementValue">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shoes Size"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80e-vO-buR" customClass="ODMSwipeSelector">
@@ -141,16 +150,19 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxIncrementValue">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Shirt Size"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="incrementValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -179,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637" y="441"/>
+            <point key="canvasLocation" x="637" y="451"/>
         </scene>
     </scenes>
 </document>

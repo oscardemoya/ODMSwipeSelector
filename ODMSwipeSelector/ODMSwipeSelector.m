@@ -32,12 +32,31 @@
     if (self) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
         self.clipsToBounds = YES;
+        [self setDefaultPropertyValues];
         [self addGesture];
         [self addTrackView];
         [self addTitleLabel];
         [self addValueLabel];
     }
     return self;
+}
+
+- (void)setDefaultPropertyValues {
+    self.minSwipingColor = [UIColor grayColor];
+    self.maxSwipingColor = [UIColor blackColor];
+    self.defaultLabelColor = [UIColor blackColor];
+    self.swipingLabelColor = [UIColor whiteColor];
+    self.value = 0;
+    self.minValue = 0;
+    self.maxValue = 10;
+    self.incrementValue = 1;
+    self.maxIncrementValue = 5;
+    self.title = @"Label";
+}
+
+- (void)awakeFromNib {
+    self.titleLabel.text = self.title;
+    [self updateValueLabelWithValue:self.value];
 }
 
 - (void)addGesture {
@@ -266,14 +285,14 @@
     
     // Update current value
     float percent = (translation.x / self.frame.size.width);
-    float newValue = self.value + (self.incrementValue * percent);
+    float newValue = self.value + (self.maxIncrementValue * percent);
     NSLog(@"%.2f", newValue);
-    if (newValue >= self.minimumValue && newValue <= self.maximumValue) {
+    if (newValue >= self.minValue && newValue <= self.maxValue) {
         self.currentValue = newValue;
-    } else if (newValue <= self.minimumValue) {
-        self.currentValue = self.minimumValue;
-    } else if (newValue >= self.maximumValue) {
-        self.currentValue = self.maximumValue;
+    } else if (newValue <= self.minValue) {
+        self.currentValue = self.minValue;
+    } else if (newValue >= self.maxValue) {
+        self.currentValue = self.maxValue;
     }
     [self updateValueLabelWithValue:self.currentValue];
 }

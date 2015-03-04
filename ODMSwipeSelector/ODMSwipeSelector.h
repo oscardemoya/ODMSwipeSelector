@@ -33,9 +33,10 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIColor *defaultLabelColor;
 @property (nonatomic) IBInspectable UIColor *swipingLabelColor;
 @property (nonatomic) IBInspectable float value;
-@property (nonatomic) IBInspectable float minimumValue;
-@property (nonatomic) IBInspectable float maximumValue;
+@property (nonatomic) IBInspectable float minValue;
+@property (nonatomic) IBInspectable float maxValue;
 @property (nonatomic) IBInspectable float incrementValue;
+@property (nonatomic) IBInspectable float maxIncrementValue;
 @property (nonatomic) IBInspectable NSString *title;
 
 @property (assign, nonatomic) MCDMeasureFormat unit;
