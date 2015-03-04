@@ -22,7 +22,8 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Oscar De Moya, oscardemoya@gmail.com
+Oscar De Moya
+[@odm](http://twitter.com/odm)
 
 ## License
 
