@@ -11,10 +11,10 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-### From the Interface Builder
+#### From the Interface Builder
 To use this control in your views from the interface builder add a UIView and set ODMSwipeSelector as the custom class. Default properties can be set from the Attributes Inspector of the interface builder.
 
-### Programatically
+#### Programatically
 Create an instance of ODMSwipeSelector add it to your view and set the values of the properties you want to customize.
 
 ~~~objective-c

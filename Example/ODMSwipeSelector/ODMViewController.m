@@ -30,12 +30,13 @@
     self.shoesSizeSelector.unit = ODMMeasureFormatFloat;
     
     // Sample to create it programatically
+    /*
     ODMSwipeSelector *heightSelector = [[ODMSwipeSelector alloc] initWithFrame:CGRectMake(0, 20, 320, 50)];
     heightSelector.backgroundColor = [UIColor whiteColor];
     heightSelector.title = @"Height";
     heightSelector.unit = ODMMeasureFormatInch;
     heightSelector.value = 5.5;
-    [self.view addSubview:heightSelector];
+    [self.view addSubview:heightSelector]; */
 }
 
 - (void)didReceiveMemoryWarning
