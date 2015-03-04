@@ -41,6 +41,19 @@
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.clipsToBounds = YES;
+        [self setDefaultPropertyValues];
+        [self addGesture];
+        [self addTrackView];
+        [self addTitleLabel];
+        [self addValueLabel];
+    }
+    return self;
+}
+
 - (void)setDefaultPropertyValues {
     self.minSwipingColor = [UIColor grayColor];
     self.maxSwipingColor = [UIColor blackColor];
@@ -167,7 +180,7 @@
     [self updateValueLabelWithValue:value];
 }
 
-- (void)setUnit:(MCDMeasureFormat)unit {
+- (void)setUnit:(ODMMeasureFormat)unit {
     _unit = unit;
     [self updateValueLabelWithValue:self.value];
 }
@@ -175,7 +188,7 @@
 #pragma mark - Private
 
 - (NSString *)sizeStringWithValue:(float)value {
-    MCDMeasureSize size = (int)value;
+    ODMMeasureSize size = (int)value;
     static NSArray *values;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -189,19 +202,19 @@
 
 - (void)updateValueLabelWithValue:(float)value {
     switch (self.unit) {
-        case MCDMeasureFormatInt:
+        case ODMMeasureFormatInt:
             self.valueLabel.text = [NSString stringWithFormat:@"%d", (int)value];
             break;
             
-        case MCDMeasureFormatFloat:
+        case ODMMeasureFormatFloat:
             self.valueLabel.text = [NSString stringWithFormat:@"%.1f", value];
             break;
             
-        case MCDMeasureFormatInch:
+        case ODMMeasureFormatInch:
             self.valueLabel.text = [NSString stringWithFormat:@"%.1f\"", value];
             break;
             
-        case MCDMeasureFormatSize:
+        case ODMMeasureFormatSize:
             self.valueLabel.text = [self sizeStringWithValue:value];
             break;
             

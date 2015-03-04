@@ -24,10 +24,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.heightSelector.unit = MCDMeasureFormatInch;
-    self.weightSelector.unit = MCDMeasureFormatInt;
-    self.shirtSizeSelector.unit = MCDMeasureFormatSize;
-    self.shoesSizeSelector.unit = MCDMeasureFormatFloat;
+    self.heightSelector.unit = ODMMeasureFormatInch;
+    self.weightSelector.unit = ODMMeasureFormatInt;
+    self.shirtSizeSelector.unit = ODMMeasureFormatSize;
+    self.shoesSizeSelector.unit = ODMMeasureFormatFloat;
+    
+    // Sample to create it programatically
+    ODMSwipeSelector *heightSelector = [[ODMSwipeSelector alloc] initWithFrame:CGRectMake(0, 20, 320, 50)];
+    heightSelector.backgroundColor = [UIColor whiteColor];
+    heightSelector.title = @"Height";
+    heightSelector.unit = ODMMeasureFormatInch;
+    heightSelector.value = 5.5;
+    [self.view addSubview:heightSelector];
 }
 
 - (void)didReceiveMemoryWarning

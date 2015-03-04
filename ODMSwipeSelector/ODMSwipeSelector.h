@@ -8,21 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, MCDMeasureFormat) {
-    MCDMeasureFormatInt,
-    MCDMeasureFormatFloat,
-    MCDMeasureFormatInch,
-    MCDMeasureFormatSize
+typedef NS_ENUM(NSInteger, ODMMeasureFormat) {
+    ODMMeasureFormatInt,
+    ODMMeasureFormatFloat,
+    ODMMeasureFormatInch,
+    ODMMeasureFormatSize
 };
 
-typedef NS_ENUM(NSInteger, MCDMeasureSize) {
-    MCDMeasureSizeXXS,
-    MCDMeasureSizeXS,
-    MCDMeasureSizeS,
-    MCDMeasureSizeM,
-    MCDMeasureSizeL,
-    MCDMeasureSizeXL,
-    MCDMeasureSizeXXL
+typedef NS_ENUM(NSInteger, ODMMeasureSize) {
+    ODMMeasureSizeXXS,
+    ODMMeasureSizeXS,
+    ODMMeasureSizeS,
+    ODMMeasureSizeM,
+    ODMMeasureSizeL,
+    ODMMeasureSizeXL,
+    ODMMeasureSizeXXL
 };
 
 IB_DESIGNABLE
@@ -39,6 +39,6 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable float maxIncrementValue;
 @property (nonatomic) IBInspectable NSString *title;
 
-@property (assign, nonatomic) MCDMeasureFormat unit;
+@property (assign, nonatomic) ODMMeasureFormat unit;
 
 @end
