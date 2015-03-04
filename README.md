@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/ODMSwipeSelector.svg?style=flat)](http://cocoadocs.org/docsets/ODMSwipeSelector)
 [![Platform](https://img.shields.io/cocoapods/p/ODMSwipeSelector.svg?style=flat)](http://cocoadocs.org/docsets/ODMSwipeSelector)
 
-![](Preview/ODMSwipeSelector.gif =250x)
+![](./Preview/ODMSwipeSelector.gif)
 
 ## Usage
 
