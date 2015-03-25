@@ -201,6 +201,10 @@
 }
 
 - (void)updateValueLabelWithValue:(float)value {
+    if ([self.delegate respondsToSelector:@selector(swipeSelector:willChangeToValue:)]) {
+        [self.delegate swipeSelector:self willChangeToValue:value];
+    }
+    
     switch (self.unit) {
         case ODMMeasureFormatInt:
             self.valueLabel.text = [NSString stringWithFormat:@"%d", (int)value];
@@ -220,6 +224,10 @@
             
         default:
             break;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(swipeSelector:didChangeToValue:)]) {
+        [self.delegate swipeSelector:self didChangeToValue:value];
     }
 }
 
@@ -244,7 +252,7 @@
 #pragma mark - Pan gestures
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer {
-
+    
     switch (recognizer.state) {
             
         case UIGestureRecognizerStateBegan: {
