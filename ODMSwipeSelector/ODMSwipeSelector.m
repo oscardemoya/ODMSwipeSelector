@@ -325,7 +325,7 @@
     rightContraint.constant = 0;
     [self setNeedsUpdateConstraints];
     [UIView animateWithDuration:0.2f animations:^{
-        self.trackView.backgroundColor = self.swipingLabelColor;
+        //self.trackView.backgroundColor = self.swipingLabelColor;
         self.titleLabel.textColor = self.defaultLabelColor;
         self.valueLabel.textColor = self.defaultLabelColor;
         self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
