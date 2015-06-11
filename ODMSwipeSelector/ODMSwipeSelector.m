@@ -22,6 +22,7 @@
 @property (strong, nonatomic) UIView *trackView;
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *valueLabel;
+@property (strong, nonatomic) UIColor *originalBackgroundColor;
 
 @end
 
@@ -31,12 +32,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
-        self.clipsToBounds = YES;
-        [self setDefaultPropertyValues];
-        [self addGesture];
-        [self addTrackView];
-        [self addTitleLabel];
-        [self addValueLabel];
+        [self configureSwipeSelector];
     }
     return self;
 }
@@ -44,14 +40,18 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.clipsToBounds = YES;
-        [self setDefaultPropertyValues];
-        [self addGesture];
-        [self addTrackView];
-        [self addTitleLabel];
-        [self addValueLabel];
+        [self configureSwipeSelector];
     }
     return self;
+}
+
+- (void)configureSwipeSelector {
+    self.clipsToBounds = YES;
+    [self setDefaultPropertyValues];
+    [self addGesture];
+    [self addTrackView];
+    [self addTitleLabel];
+    [self addValueLabel];
 }
 
 - (void)setDefaultPropertyValues {
@@ -59,6 +59,7 @@
     self.maxSwipingColor = [UIColor blackColor];
     self.defaultLabelColor = [UIColor blackColor];
     self.swipingLabelColor = [UIColor whiteColor];
+    self.originalBackgroundColor = self.backgroundColor;
     self.value = 0;
     self.minValue = 0;
     self.maxValue = 10;
@@ -281,7 +282,7 @@
 - (void)startSwipeWithGesture:(UIPanGestureRecognizer *)recognizer {
     self.titleLabel.textColor = self.swipingLabelColor;
     self.valueLabel.textColor = self.swipingLabelColor;
-    //self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
+    self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
 }
 
 - (void)swipeWithGesture:(UIPanGestureRecognizer *)recognizer {
@@ -328,7 +329,7 @@
         self.trackView.backgroundColor = [UIColor clearColor];
         self.titleLabel.textColor = self.defaultLabelColor;
         self.valueLabel.textColor = self.defaultLabelColor;
-        //self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
+        self.backgroundColor = self.originalBackgroundColor;
         [self layoutIfNeeded];
     }];
     
