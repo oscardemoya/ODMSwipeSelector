@@ -201,6 +201,10 @@
 }
 
 - (void)updateValueLabelWithValue:(float)value {
+    if ([self.delegate respondsToSelector:@selector(swipeSelector:willChangeToValue:)]) {
+        [self.delegate swipeSelector:self willChangeToValue:value];
+    }
+    
     switch (self.unit) {
         case ODMMeasureFormatInt:
             self.valueLabel.text = [NSString stringWithFormat:@"%d", (int)value];
@@ -220,6 +224,10 @@
             
         default:
             break;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(swipeSelector:didChangeToValue:)]) {
+        [self.delegate swipeSelector:self didChangeToValue:value];
     }
 }
 
@@ -244,7 +252,7 @@
 #pragma mark - Pan gestures
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer {
-
+    
     switch (recognizer.state) {
             
         case UIGestureRecognizerStateBegan: {
@@ -273,7 +281,7 @@
 - (void)startSwipeWithGesture:(UIPanGestureRecognizer *)recognizer {
     self.titleLabel.textColor = self.swipingLabelColor;
     self.valueLabel.textColor = self.swipingLabelColor;
-    self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
+    //self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
 }
 
 - (void)swipeWithGesture:(UIPanGestureRecognizer *)recognizer {
@@ -317,10 +325,10 @@
     rightContraint.constant = 0;
     [self setNeedsUpdateConstraints];
     [UIView animateWithDuration:0.2f animations:^{
-        self.trackView.backgroundColor = [UIColor whiteColor];
+        self.trackView.backgroundColor = [UIColor clearColor];
         self.titleLabel.textColor = self.defaultLabelColor;
         self.valueLabel.textColor = self.defaultLabelColor;
-        self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
+        //self.backgroundColor = [UIColor colorWithRed:self.minSwipeRed/255 green:self.minSwipeGreen/255 blue:self.minSwipeBlue/255 alpha:1];
         [self layoutIfNeeded];
     }];
     

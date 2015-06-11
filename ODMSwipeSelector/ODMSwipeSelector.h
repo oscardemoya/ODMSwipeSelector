@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class ODMSwipeSelector;
+
+@protocol ODMSwipeSelectorDelegate <NSObject>
+@optional
+- (void)swipeSelector:(ODMSwipeSelector *)swipeSelector willChangeToValue:(float)value;
+- (void)swipeSelector:(ODMSwipeSelector *)swipeSelector didChangeToValue:(float)value;
+@end
+
 typedef NS_ENUM(NSInteger, ODMMeasureFormat) {
     ODMMeasureFormatInt,
     ODMMeasureFormatFloat,
@@ -40,5 +48,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString *title;
 
 @property (assign, nonatomic) ODMMeasureFormat unit;
+
+@property (weak, nonatomic) id <ODMSwipeSelectorDelegate> delegate;
 
 @end
