@@ -506,7 +506,7 @@
 				GCC_PREFIX_HEADER = "ODMSwipeSelector/ODMSwipeSelector-Prefix.pch";
 				INFOPLIST_FILE = "ODMSwipeSelector/ODMSwipeSelector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,7 +521,7 @@
 				GCC_PREFIX_HEADER = "ODMSwipeSelector/ODMSwipeSelector-Prefix.pch";
 				INFOPLIST_FILE = "ODMSwipeSelector/ODMSwipeSelector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

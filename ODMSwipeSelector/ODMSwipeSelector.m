@@ -290,10 +290,10 @@
     NSLayoutConstraint *leftContraint = [self leftSpaceBetweenSuperview:self andChildView:self.trackView];
     NSLayoutConstraint *rightContraint = [self rightSpaceBetweenSuperview:self andChildView:self.trackView];
     CGPoint translation = [recognizer translationInView:recognizer.view];
-    if (translation.x > 0) {
+    if (translation.x > 0 && translation.x <= self.frame.size.width) {
         leftContraint.constant = translation.x;
         rightContraint.constant = 0;
-    } else if (translation.x < 0) {
+    } else if (translation.x < 0 && translation.x >= -self.frame.size.width) {
         leftContraint.constant = 0;
         rightContraint.constant = -translation.x;
     }
